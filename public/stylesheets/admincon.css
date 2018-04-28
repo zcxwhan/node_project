@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+.h3top{
+    height:35px;
+   margin-bottom: 20px;
+}
+.h3top div{
+    float: left;
+}
+.h3top div input{
+    width:180px;
+    height:30px;
+}
+.h3top div button{
+    width:100px;
+    height:30px;
+    background:rgb(67,124,185);
+    line-height:30px;
+    text-align: center;
+    color:#fff;
+    border:0;
+    margin-left:13px;
+    border-radius:5px;
+}
+.h3top i{
+    font-style: normal;
+    float: right;
+    width:60px;
+    height:30px;
+    background:rgb(89, 95, 102);
+    line-height:30px;
+    text-align: center;
+    color:#fff;
+    border-radius:5px;
+    cursor: pointer;
+}
+table  th,table td{
+    text-align: center;
+}
+table td img{
+    width:50px;
+    height:50px;
+}
+table td em ,table td span{
+    font-style: normal;
+    cursor: pointer;
+}
+
+/* add提示框 */
+.mask{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.6);
+	display: none;
+}
+.win{
+	position: absolute;
+	box-shadow: 0px 0px 5px black;
+	background: white;
+	border-radius: 5px;
+}
+.title{
+	padding-left: 10px;
+	background: skyblue;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	color: white;
+	position: relative;
+	cursor: move;
+}
+.close{
+	position: absolute;
+	right: 5px;
+	cursor: pointer;
+}
+.close:hover{
+	color: red;
+}
+
+.win .content{
+	padding:40px;
+}
+.win .content h4{
+	text-align: center;
+	line-height:50px;
+	margin-bottom:10px;
+}
+
+.btnSure,.btnClose{
+	display: inline-block;
+	width:60px;
+	height:30px;
+	line-height:30px;
+	background: skyblue;
+	color: #fff;
+	text-align: center;
+	border-radius: 4px;
+	margin:0 10px;
+}
+.btnSure{
+	margin-left: 40px;
+}
+
+.ninput{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin:5px;
+    width: 450px;
+}
+
+.update:hover,.del:hover{
+    color: red;
+}

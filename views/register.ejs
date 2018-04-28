@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link type="image/x-icon" href="/images/wb.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="/stylesheets/common.css" />
+		<link rel="stylesheet" href="/stylesheets/iconfont.css" />
+		<link rel="stylesheet" href="/stylesheets/login.css" />
+		<title>用户注册</title>
+	</head>
+	<body>
+		<div class="header-con">
+			<img src="/images/logo1.png" alt="" />
+		</div>
+		<div id="content">
+			<div class="content-con">
+				<div class="login-weaper">
+					<h2><span>会员注册</span></h2>
+					<div class="tab1">
+						<p>
+							<span class="iconfont icon-icon--"></span><input type="text" name="" id="username" placeholder="用户名"/>
+					
+						</p>
+						<strong></strong>
+						<p>
+							<span class="iconfont icon-yanzhengma2"></span><input type="password" name="" id="password" placeholder="密码"/>
+							<em></em>
+						</p>
+						<strong></strong>
+						<button id="submit">立即注册</button>
+						<h3>账号密码 | 社交登录</h3>
+					</div>
+					<div class="tab2">
+						<img src="/images/login_erweima.png" alt="" class="imgerwei"/>
+						<img src="/images/login.shouji.png" alt="" / class="imgphone">
+						<h4>使用万表APP扫码登录</h4>
+						<h5>在首页顶部搜索栏点击扫一扫</h5>
+						<a href="###">下载万表APP</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="foot-con">
+			<p>万表网名表商城 版权所有 2008-2017 ICP备案证书号:粤ICP备09108738号 网监备案:4401060103141</p>
+			<p>广州市万表科技股份有限公司 地址:广州市番禺区番禺大道北60-1号</p>
+			<p>Copyright 2008-2017 WWW.WBIAO.CN.LTD ALL RIGHT RESERVED.</p>
+		</footer>
+	</body>
+	<script src="javascripts/jquery.min.js"></script>
+	<script>
+		$(function(){
+
+			$("#submit").on("click", register );
+
+			function register(){
+				var username = $("#username").val();
+				var password = $("#password").val();
+
+				var options = {
+					url:"register/confirm",
+					type:"post",
+					data:{
+						username:username,
+						password:password
+					}
+				}
+				$("#submit").html("提交中。。。请稍后");
+				$.ajax(options)
+				.then(function(res){
+					console.log(res);
+					if(res ==0){
+						alert('服务器故障');
+						$("#submit").html("立即注册");
+					}else if(res==1){
+						alert('用户名已存在');
+						$("#submit").html("立即注册");
+					}else{
+						$("#submit").html("OK，即将跳转登录页");
+						setTimeout(() => {
+							location.href="/login";
+						}, 2000);
+						console.log(res);
+					}
+				
+				})
+
+			}
+
+		})  
+	</script>
+</html>

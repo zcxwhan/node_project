@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link type="image/x-icon" href="/images/wb.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="/stylesheets/common.css" />
+		<link rel="stylesheet" href="/stylesheets/iconfont.css" />
+		<link rel="stylesheet" href="/stylesheets/login.css" />
+		<title>用户登录</title>
+	</head>
+	<body>
+		<div class="header-con">
+			<img src="/images/logo1.png" alt="" />
+		</div>
+		<div id="content">
+			<div class="content-con">
+				<div class="login-weaper">
+					<h2><span>会员登录</span></h2>
+					<div class="tab1">
+						<p>
+							<span class="iconfont icon-icon--"></span><input type="text" name="" id="username"  placeholder="用户名"/>
+					
+						</p>
+						<strong></strong>
+						<p>
+							<span class="iconfont icon-yanzhengma2"></span><input type="password" name="" id="password"  placeholder="密码"/>
+							<em></em>
+						</p>
+                        <strong></strong>
+                        <input type="checkbox" name="" id="needTocken"><label for="needTocken">7天免密登录</label>
+						<button id="submit">立即登录</button>
+						<h3>账号密码 | 社交登录</h3>
+					</div>
+					<div class="tab2">
+						<img src="/images/login_erweima.png" alt="" class="imgerwei"/>
+						<img src="/images/login.shouji.png" alt="" / class="imgphone">
+						<h4>使用万表APP扫码登录</h4>
+						<h5>在首页顶部搜索栏点击扫一扫</h5>
+						<a href="###">下载万表APP</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="foot-con">
+			<p>万表网名表商城 版权所有 2008-2017 ICP备案证书号:粤ICP备09108738号 网监备案:4401060103141</p>
+			<p>广州市万表科技股份有限公司 地址:广州市番禺区番禺大道北60-1号</p>
+			<p>Copyright 2008-2017 WWW.WBIAO.CN.LTD ALL RIGHT RESERVED.</p>
+		</footer>
+		<script src="javascripts/jquery.min.js"></script>
+		<script>
+		$(function(){
+            $("#submit").on("click", login );
+
+            function login(){
+                $("#submit").html("登录中。。。");
+                var username = $("#username").val();
+                var password = $("#password").val();
+
+                var options = {
+                    url:"login/confirm",
+                    type:"post",
+                    data:{
+                        username:username,
+                        password:password,
+                        tocken:$("#needTocken").is(":checked")
+                    }
+                }
+                $.ajax(options)
+                .then(function(res){
+                    if(res ==0){
+                        alert('服务器故障');
+                        $("#submit").html("登录");
+                    }else if(res==1){
+                        alert('用户名或密码错误');
+                        $("#submit").html("登录");
+                    }else{
+                        console.log(res);
+                        $("#submit").html("登录成功，稍后。。。");
+                        setTimeout(() => {
+                            location.href="/";
+                        }, 1000);
+                    }
+                   
+                });
+
+            }
+            
+
+    });  
+		</script>
+	</body>
+</html>

@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>主页面</title>
+    <!-- Bootstrap Styles-->
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="/stylesheets/font-awesome.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="/stylesheets/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="/stylesheets/admincon.css" rel="stylesheet" />
+    <link type="image/x-icon" href="/images/wb.ico" rel="shortcut icon">
+</head>
+
+<body>
+    <div id="wrapper">
+        
+        <!-- 上面 -->
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="" onclick="return false;"><strong>你好~~~<em><%=username %> </em></strong></a>
+                <div id="sideNav" href=""><i class="fa fa-caret-right"></i></div>
+                <p class="navbar-text" style="margin:0;padding:0;color:#fff;line-height:60px;padding-left:400px;font-size:24px;">Welcom to 后台系统</p>
+            </div>
+            
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> 配置</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> 设置</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="/goods/admin"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+        
+        <!-- 左侧 -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a href="" id="goodslist" onclick="return false;"><i class="fa fa-dashboard"></i> 商品列表</a>
+                    </li>
+                    <li>
+                        <a href="" id="userlist"><i class="fa fa-desktop"></i>用户管理</a>
+                    </li>
+					<li>
+                        <a href=""><i class="fa fa-bar-chart-o"></i>商品管理</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-qrcode"></i>产品管理</a>
+                    </li>
+
+
+                    <li>
+                        <a href=""><i class="fa fa-sitemap"></i> 配置管理<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="">配置1</a>
+                            </li>
+                            <li>
+                                <a href="">配置2<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="">配置2A</a>
+                                    </li>
+                                    <li>
+                                        <a href="">配置2B</a>
+                                    </li>
+                                    <li>
+                                        <a href="">配置2C</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">配置3</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        
+        
+        <!-- 主内容 -->
+      
+		<div id="page-wrapper">
+		   <div class="header"> 
+                <ol class="breadcrumb">
+                    <li><a href="#" id="welcome">welcome....</a></li>
+                </ol>                       
+            </div>
+            <div id="page-inner">
+            </div>
+           
+        </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="/javascripts/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="/javascripts/bootstrap.min.js"></script>
+	 
+    <!-- Metis Menu Js -->
+    <script src="/javascripts/jquery.metisMenu.js"></script>
+    <!-- Custom Js -->
+    <script src="/javascripts/custom-scripts.js"></script>
+    <script src="/javascripts/msg.min.js"></script>
+    <script src="/javascripts/admincontent.js"></script>
+      <script>
+    
+      </script>
+
+</body>
+
+</html>

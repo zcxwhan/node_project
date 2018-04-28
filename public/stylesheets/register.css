@@ -1,0 +1,137 @@
+body {
+  background: #fafafa; }
+
+#top {
+  width: 1000px;
+  height: 150px;
+  margin: 0px auto; }
+
+#top img {
+  float: left;
+  margin-top: 40px; }
+
+#center {
+  width: 1000px;
+  height: 650px;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 0 auto; }
+
+#reg {
+  width: 336px;
+  height: 650px;
+  margin: 0 auto; }
+
+#reg h2 {
+  height: 116px;
+  line-height: 116px;
+  text-align: center;
+  font-size: 31px; }
+
+#reg p {
+  position: relative;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 10px;
+  width: 326px;
+  border: 1px solid #ddd;
+  margin-bottom: 6px; }
+
+#reg p span {
+  display: inline-block;
+  width: 20px;
+  height: 26px;
+  float: left; }
+
+#reg input[type=text], #reg input[type=password] {
+  float: left;
+  height: 38px;
+  line-height: 40px;
+  width: 306px;
+  border: 0; }
+
+#reg strong {
+  display: none;
+  font-size: 12px;
+  color: #cc0000;
+  padding-left: 16px;
+  height: 20px;
+  line-height: 20px; }
+
+#reg > p:nth-of-type(3) {
+  width: 200px;
+  position: relative; }
+
+#phonecode {
+  width: 180px !important; }
+
+#reg input[type=button] {
+  height: 38px;
+  border: 1px solid #ddd;
+  line-height: 38px;
+  text-align: center;
+  width: 97px;
+  background: #fff;
+  position: absolute;
+  right: -127px; }
+
+input::-webkit-input-placeholder {
+  color: #ddd;
+  font-size: 12px; }
+
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ddd;
+  font-size: 12px; }
+
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ddd;
+  font-size: 12px; }
+
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ddd;
+  font-size: 12px; }
+
+#reg a {
+  display: block;
+  width: 338px;
+  height: 38px;
+  line-height: 39px;
+  text-align: center;
+  color: #fff;
+  background: #cc0000;
+  margin-bottom: 10px;
+  border-radius: 4px; }
+
+#reg div {
+  font-size: 12px; }
+
+#reg em {
+  display: inline-block;
+  width: 96px;
+  position: absolute;
+  height: 38px;
+  right: 0; }
+
+#reg-box {
+  width: 260px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  box-shadow: 0px 0px 4px #333;
+  background-color: #fff;
+  background-image: url(../images/loading.gif);
+  background-repeat: no-repeat;
+  background-position: 4px 3px;
+  background-size: 30px; }
+
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none; }
